@@ -1,0 +1,177 @@
+* {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+html {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: #93c47d;
+    display: flex;
+}
+
+.headerLogo {
+    height: 70px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.headerText {
+    color: white;
+    vertical-align: middle;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+main {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.homeLogo {
+    height: 70px;
+}
+
+.headerRight {
+    margin-left: auto;
+    float: right;
+    height: 80px;
+}
+
+.rightLink {
+    line-height: 80px;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    width: 100px;
+    border-left: 1px solid white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.rightLink.selected {
+    background-color: white;
+    color: #93c47d;
+}
+
+.selectionBoxOpener.dropdownSelected {
+    background-color: rgba(147, 196, 125, 0.7);
+}
+
+.flip {
+    transform: rotate(-180deg);
+}
+
+button.selectionBoxOpener {
+    border-radius: 5px;
+    transition: 0.5s;
+    background-color: rgba(147, 196, 125, 0.5);
+    margin-top: 10px;
+    border: none;
+    line-height: 40px;
+    width: 180px;
+    outline: none;
+    vertical-align: middle;
+    text-align: left;
+    cursor: pointer;
+}
+
+button.selectionBoxOpener:hover, .selectionBoxOpener.selected {
+    background-color: rgba(147, 196, 125, 0.7);
+}
+
+.material-icons.dropdownOpener {
+    font-size: 20pt;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-left: 5px;
+    -moz-transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    transition: transform 0.5s;
+}
+
+span.dropdownOpenerText {
+    margin-left: 5px;
+}
+
+.selectionBoxDropdown {
+    border-radius: 5px;
+    background-color: rgba(147, 196, 125, 0.7);
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 180px;
+}
+
+.choiceTitle {
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 2px;
+}
+
+.choice {
+    font-weight: normal;
+    padding-left: 10px;
+    width: 180px;
+    text-align: left;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.choice:hover {
+    background-color: rgba(147, 196, 125, 0.7);
+}
+
+.originalNumberInput {
+    border-radius: 5px;
+    transition: 0.5s;
+    background-color: rgba(147, 196, 125, 0.4);
+    margin-top: 10px;
+    border: none;
+    line-height: 40px;
+    width: 170px;
+    outline: none;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 10px;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+button.convertButton {
+    border-radius: 5px;
+    transition: 0.5s;
+    background-color: rgba(147, 196, 125, 0.5);
+    margin-top: 10px;
+    border: none;
+    line-height: 40px;
+    width: 180px;
+    outline: none;
+    vertical-align: middle;
+    text-align: left;
+    cursor: pointer;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+button.convertButton:hover {
+    background-color: rgba(147, 196, 125, 0.7);
+}

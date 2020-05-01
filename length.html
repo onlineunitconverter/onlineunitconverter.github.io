@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Length | Online Unit Converter</title>
+        <script src="script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="Description" content="Online Unit Converter - a free, accurate unit converter.">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="media/logo.png" class="headerLogo" alt="Online Unit Converter Logo">
+            <span class="headerText">Online Unit Converter</span>
+            <div class="headerRight">
+                <a class="rightLink" href="area">Area</a>
+                <a class="rightLink selected">Length</a>
+            </div>
+        </header>
+        <main>
+            <h1>Length - Online Unit Converter</h1>
+            <input type="number" class="originalNumberInput" placeholder="Enter a number">
+            <div class="selectionBox original">
+                <button class="selectionBoxOpener original" onclick="selectDropdown('original');"><span class="dropdownOpenerText original">Select a length</span><i class="material-icons dropdownOpener original">arrow_drop_down</i></button>
+                <div class="selectionBoxDropdown original" style="display: none;">
+                    <span class="choiceTitle">Length</span>
+                    <button class="choice nm original" onclick="submitDropdown('nm', 'original', true)">Nanometres - nm</button>
+                    <button class="choice um original" onclick="submitDropdown('um', 'original', true)">Micrometres - μm</button>
+                    <button class="choice mm original" onclick="submitDropdown('mm', 'original', true)">Millimetres - mm</button>
+                    <button class="choice cm original" onclick="submitDropdown('cm', 'original', true)">Centimetres - cm</button>
+                    <button class="choice m original" onclick="submitDropdown('m', 'original', true)">Metres - m</button>
+                    <button class="choice km original" onclick="submitDropdown('km', 'original', true)">Kilometres - km</button>
+                    <button class="choice in original" onclick="submitDropdown('in', 'original', true)">Inch - in</button>
+                    <button class="choice ft original" onclick="submitDropdown('ft', 'original', true)">Feet - ft</button>
+                    <button class="choice yd original" onclick="submitDropdown('yd', 'original', true)">Yard - yd</button>
+                    <button class="choice mi original" onclick="submitDropdown('mi', 'original', true)">Miles - mi</button>
+                    <button class="choice nmi original" onclick="submitDropdown('nmi', 'original', true)">Nautical Mile - nmi</button>
+                    <button class="choice ly original" onclick="submitDropdown('ly', 'original', true)">Light Years - ly</button>
+                </div>
+            </div>
+            <p>to</p>
+            <div class="selectionBox new">
+                <button class="selectionBoxOpener newDropdown" onclick="selectDropdown('newDropdown');"><span class="dropdownOpenerText newDropdown">Select a length</span><i class="material-icons dropdownOpener newDropdown">arrow_drop_down</i></button>
+                <div class="selectionBoxDropdown newDropdown" style="display: none;">
+                    <span class="choiceTitle">Length</span>
+                    <button class="choice nm new" onclick="submitDropdown('nm', 'newDropdown', false)">Nanometres - nm</button>
+                    <button class="choice um new" onclick="submitDropdown('um', 'newDropdown', false)">Micrometres - μm</button>
+                    <button class="choice mm new" onclick="submitDropdown('mm', 'newDropdown', false)">Millimetres - mm</button>
+                    <button class="choice cm new" onclick="submitDropdown('cm', 'newDropdown', false)">Centimetres - cm</button>
+                    <button class="choice m new" onclick="submitDropdown('m', 'newDropdown', false)">Metres - m</button>
+                    <button class="choice km new" onclick="submitDropdown('km', 'newDropdown', false)">Kilometres - km</button>
+                    <button class="choice in new" onclick="submitDropdown('in', 'newDropdown', false)">Inch - in</button>
+                    <button class="choice ft new" onclick="submitDropdown('ft', 'newDropdown', false)">Feet - ft</button>
+                    <button class="choice yd new" onclick="submitDropdown('yd', 'newDropdown', false)">Yard - yd</button>
+                    <button class="choice mi new" onclick="submitDropdown('mi', 'newDropdown', false)">Miles - mi</button>
+                    <button class="choice nmi new" onclick="submitDropdown('nmi', 'newDropdown', false)">Nautical Mile - nmi</button>
+                    <button class="choice ly new" onclick="submitDropdown('ly', 'newDropdown', false)">Light Years - ly</button>
+                </div>
+            </div>
+            <p>rounded to</p>
+            <div class="selectionBox dp">
+                <button class="selectionBoxOpener dpDropdown" onclick="selectDropdown('dpDropdown');"><span class="dropdownOpenerText dpDropdown">Select rounding</span><i class="material-icons dropdownOpener dpDropdown">arrow_drop_down</i></button>
+                <div class="selectionBoxDropdown dpDropdown" style="display: none;">
+                    <span class="choiceTitle">Length</span>
+                    <button class="choice dp1 dp" onclick="submitDropdown('dp1', 'dpDropdown', false)">1 Decimal Place</button>
+                    <button class="choice dp2 dp" onclick="submitDropdown('dp2', 'dpDropdown', false)">2 Decimal Places</button>
+                    <button class="choice dp3 dp" onclick="submitDropdown('dp3', 'dpDropdown', false)">3 Decimal Places</button>
+                    <button class="choice dp4 dp" onclick="submitDropdown('dp4', 'dpDropdown', false)">4 Decimal Places</button>
+                    <button class="choice dp5 dp" onclick="submitDropdown('dp5', 'dpDropdown', false)">5 Decimal Places</button>
+                    <button class="choice dp6 dp" onclick="submitDropdown('dp6', 'dpDropdown', false)">6 Decimal Places</button>
+                    <button class="choice dp7 dp" onclick="submitDropdown('dp7', 'dpDropdown', false)">7 Decimal Places</button>
+                    <button class="choice dp8 dp" onclick="submitDropdown('dp8', 'dpDropdown', false)">8 Decimal Places</button>
+                    <button class="choice none dp" onclick="submitDropdown('none', 'dpDropdown', false)">Full Number</button>
+                </div>
+            </div>
+            <br><br>
+            <button class="convertButton" onclick="submitConversion('length');">Convert</button>
+            <br><br><br><br>
+            <div class="numberOutput" style="display: none;">
+                <span><strong>The converted number is </strong><br><br><span class="outputtedNumber"></span></span>
+                <br><br>
+                <a href="javascript:copyToClipboard($('.outputtedNumber').text());">Copy Number</a>
+            </div>
+        </main>
+    </body>
+</html>
