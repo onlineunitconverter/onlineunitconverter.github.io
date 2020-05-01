@@ -43,26 +43,39 @@ main {
     height: 70px;
 }
 
-.headerRight {
-    margin-left: auto;
-    float: right;
-    height: 80px;
-}
-
 .rightLink {
     line-height: 80px;
-    margin-left: auto;
     color: white;
     text-align: center;
     width: 100px;
     border-left: 1px solid white;
     cursor: pointer;
     text-decoration: none;
+    position: absolute;
+}
+
+.rightLink.length {
+    right: 0;
+    top: 0;
+}
+
+.rightLink.area {
+    right: 100px;
+    top: 0;
 }
 
 .rightLink.selected {
     background-color: white;
     color: #93c47d;
+}
+
+.rightLink:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all .1s ease-in-out;
+}
+
+.rightLink.selected:hover {
+    background-color: white;
 }
 
 .selectionBoxOpener.dropdownSelected {

@@ -75,12 +75,30 @@ function submitConversion(type) {
         var convertedLength = convertLength(amount, originalUnit, newUnit, dp);
         $(".outputtedNumber").text(convertedLength);
         $(".numberOutput").fadeIn();
+    } else if (type == 'area') {
+        var amount = $(".originalNumberInput").val();
+        var originalUnit = localStorage.originalChoiceUnit;
+        var newUnit = localStorage.newChoiceUnit;
+        var dp = localStorage.decimalChoice;
+        var convertedLength = convertArea(amount, originalUnit, newUnit, dp);
+        $(".outputtedNumber").text(convertedLength);
+        $(".numberOutput").fadeIn();
     }
 }
 
 function convertLength(amount, originalUnit, newUnit, dp) {
     var inBaseUnit = convertToMetres(amount, originalUnit);
     var finishedConversion = convertFromMetres(inBaseUnit, newUnit);
+    if (dp == "none") {
+        return finishedConversion;
+    } else if (dp !== "none") {
+        return +(roundNumber(finishedConversion, dp));
+    }
+}
+
+function convertArea(amount, originalUnit, newUnit, dp) {
+    var inBaseUnit = convertToCm2(amount, originalUnit);
+    var finishedConversion = convertFromCm2(inBaseUnit, newUnit);
     if (dp == "none") {
         return finishedConversion;
     } else if (dp !== "none") {
@@ -163,5 +181,49 @@ function textToDecimal(inputtedClass) {
         return 8;
     } else if (inputtedClass == "none") {
         return "none";
+    }
+}
+
+function convertToCm2(amount, originalUnit) {
+    if (originalUnit == "yd2") {
+        return amount*8361.2736;
+    } else if (originalUnit == "mi2") {
+        return amount*25899881103.464;
+    } else if (originalUnit == "km2") {
+        return amount*10000000000;
+    } else if (originalUnit == "m2") {
+        return amount*10000;
+    } else if (originalUnit == "cm2") {
+        return amount;
+    } else if (originalUnit == "ft2") {
+        return amount*929.0304;
+    } else if (originalUnit == "in2") {
+        return amount*6.4516;
+    } else if (originalUnit == "ha") {
+        return amount*100000000;
+    } else if (originalUnit == "ac") {
+        return amount*40468564.224161;
+    }
+}
+
+function convertFromCm2(amount, originalUnit) {
+    if (originalUnit == "yd2") {
+        return amount/8361.2736;
+    } else if (originalUnit == "mi2") {
+        return amount/25899881103.464;
+    } else if (originalUnit == "km2") {
+        return amount/10000000000;
+    } else if (originalUnit == "m2") {
+        return amount/10000;
+    } else if (originalUnit == "cm2") {
+        return amount;
+    } else if (originalUnit == "ft2") {
+        return amount/929.0304;
+    } else if (originalUnit == "in2") {
+        return amount/6.4516;
+    } else if (originalUnit == "ha") {
+        return amount/100000000;
+    } else if (originalUnit == "ac") {
+        return amount/40468564.224161;
     }
 }
